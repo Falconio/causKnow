@@ -1,0 +1,16 @@
+{% extends "falconfcm/base.html" %}
+
+{% block content %}
+    <h2> SPARQL Query </h2>
+
+    <form action="{% url 'falconfcm:results' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">enter your SPARQL: </label>
+            <div class="CodeMirror cm-s-default CodeMirror-wrap">
+                <textarea class="form-control" id="template-html" rows="10" name="usersparqlquery"></textarea>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+{% endblock %}

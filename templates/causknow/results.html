@@ -1,0 +1,19 @@
+{% extends "falconfcm/base.html" %}
+
+{% block content %}
+    <h2>Show SPARQL Query Results:</h2>
+    <table>
+        <tr>
+            <th>Pianist Name</th>
+            <th>Pianist Count</th> 
+        </tr>
+    {% for result in sparqlResults.results.bindings %}
+        <tr>
+            <td> {{ result.pianistName.value}}</td>
+            <td style="text-align: center;">{{ result.pianistCount.value }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    <br>
+    <a class="btn btn-primary" href="{% url 'falconfcm:sparql' %}" role="button">Query Again</a>
+{% endblock content %}
