@@ -23,7 +23,7 @@ def upload(request):
         context['fusekiResponse'] = FusekiClass.httpResponse()
         context['url'] = fs.url(name)
         
-    return render(request, 'causKnow/upload.html', context)
+    return render(request, 'causknow/upload.html', context)
 
 def SPARQLQuery(request):
     context = {}
@@ -32,8 +32,8 @@ def SPARQLQuery(request):
         SparqlUtils = sparqlQuery(UserSparqlQuery)
         context['sparqlResults'] = SparqlUtils.sparqlResults()  
 
-        return render(request, 'causKnow/results.html', context)
+        return render(request, 'causknow/results.html', context)
     else:
-        return render(request, 'causKnow/sparql.html')    
+        return render(request, 'causknow/sparql.html')    
 
 
