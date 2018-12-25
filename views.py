@@ -11,7 +11,7 @@ from .utils.rdfLoader import FusekiRdfLoader
 from .utils.sparql import sparqlQuery
 
 class Home(TemplateView):
-    template_name = 'causKnow/home.html'
+    template_name = 'causknow/home.html'
 
 def upload(request):
     context = {}
