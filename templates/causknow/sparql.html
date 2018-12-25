@@ -1,9 +1,9 @@
-{% extends "falconfcm/base.html" %}
+{% extends "causknow/base.html" %}
 
 {% block content %}
     <h2> SPARQL Query </h2>
 
-    <form action="{% url 'falconfcm:results' %}" method="POST">
+    <form action="{% url 'causknow:results' %}" method="POST">
         {% csrf_token %}
         <div class="form-group">
             <label for="exampleFormControlTextarea1">enter your SPARQL: </label>

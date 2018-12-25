@@ -1,4 +1,4 @@
-{% extends "falconfcm/base.html" %}
+{% extends "causknow/base.html" %}
 
 {% block content %}
     <h2>Show SPARQL Query Results:</h2>
@@ -15,5 +15,5 @@
     {% endfor %}
     </table>
     <br>
-    <a class="btn btn-primary" href="{% url 'falconfcm:sparql' %}" role="button">Query Again</a>
+    <a class="btn btn-primary" href="{% url 'causknow:sparql' %}" role="button">Query Again</a>
 {% endblock content %}
