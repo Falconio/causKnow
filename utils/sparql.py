@@ -1,5 +1,7 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
 
+# general scheme for SPARQL queries
+
 sparql = SPARQLWrapper("http://localhost:3030/dstest4/sparql")
 
 
@@ -15,6 +17,3 @@ class sparqlQuery:
             return results
         except:
             return "ERROR: Something wrong with the query"
-
-
-
