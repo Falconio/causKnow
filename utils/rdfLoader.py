@@ -4,7 +4,7 @@ from requests_toolbelt import MultipartEncoder
 import os
 from falconio.settings import MEDIA_ROOT
 
-url = 'http://localhost:3030/dstest4/data?graph=default'
+url = 'http://localhost:3030/falconds/data?graph=default'
 
 class FusekiRdfLoader:
     def __init__(self, rdffilename):
