@@ -12,7 +12,7 @@ class FusekiRdfLoader:
         rdfHttpData = MultipartEncoder(
             fields={'field0': (rdffilename, rdfFile, 'text/turtle')}
             )
-        self.httpRequest = requests.post(url, data=rdfHttpData, auth=HTTPBasicAuth('admin', 'pw'),
+        self.httpRequest = requests.post(url, data=rdfHttpData, auth=HTTPBasicAuth('admin', 'password'),
                           headers={'Content-Type': rdfHttpData.content_type})
     def httpResponse(self):
         response = self.httpRequest.status_code
