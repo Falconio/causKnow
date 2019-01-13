@@ -2,7 +2,7 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 
 # general scheme for SPARQL queries
 
-sparql = SPARQLWrapper("http://localhost:3030/falconds/sparql")
+sparql = SPARQLWrapper("http://localhost:3030/causknow/sparql")
 
 
 class sparqlQuery:
