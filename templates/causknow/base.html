@@ -31,29 +31,17 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light mb-4" >
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'causknow:home' %}">causKnow</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'causknow:home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'causknow:upload' %}">Add FCM Data</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'causknow:sparql' %}">Context-aware Knowledge Retrieval</a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div class="nav-scroller bg-white shadow-sm">
+        <nav class="nav nav-underline">
+            <a class="navbar-brand nav-link active" href="{% url 'causknow:home' %}">causKnow</a>
+            <a class="nav-link" href="{% url 'causknow:upload' %}">
+                Add FCM Data
+                <!-- <span class="badge badge-pill bg-light align-text-bottom">27</span> -->
+            </a>
+            <a class="nav-link" href="{% url 'causknow:sparql' %}">Context-aware Knowledge Retrieval</a>
+        </nav>
+    </div>
+    
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-md-12">
