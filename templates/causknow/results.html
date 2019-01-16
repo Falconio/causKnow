@@ -1,8 +1,8 @@
 {% extends "causknow/base.html" %}
 
 {% block content %}
-    <h2>SPARQL Query Results:</h2>
-    <table>
+    <h5>SPARQL Query Results:</h5>
+    <table class="table">
     {% for result in sparqlResults.results.bindings %}
          <tr>
             {% for item, param in result.items %}
