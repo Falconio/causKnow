@@ -6,7 +6,7 @@
     <form action="{% url 'causknow:results' %}" method="POST">
         {% csrf_token %}
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">enter your SPARQL: </label>
+            <label for="exampleFormControlTextarea1">Enter your SPARQL: </label>
             <div class="CodeMirror cm-s-default CodeMirror-wrap">
                 <textarea class="form-control" id="template-html" rows="10" name="usersparqlquery"></textarea>
             </div>
