@@ -1,7 +1,7 @@
 {% extends "causknow/base.html" %}
 
 {% block content %}
-    <h2> SPARQL Query </h2>
+    <h2> Context-aware knowledge retrieval <small class="text-muted">using SPARQL Query</small> </h2>
 
     <form action="{% url 'causknow:results' %}" method="POST">
         {% csrf_token %}

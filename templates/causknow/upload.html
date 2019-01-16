@@ -1,14 +1,23 @@
 {% extends "causknow/base.html" %}
 
 {% block content %}
-    <h2>Upload</h2>
+    <h2>Add new FCM data in RDF format (RDF/XML, Turtle, N3)</h2>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <input type="file" name="document">
-        <button type="submit">Upload file</button>
+        <div class="input-group mb-3">
+            <div class="custom-file">
+                <input type="file" name="document" class="custom-file-input" id="inputGroupFile02">
+                <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Browse your FCM data</label>
+            </div>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit" id="inputGroupFileAddon04">Upload</button>
+            </div>
+        </div>
+        <!-- <input type="file" name="document">
+        <button type="submit">Upload</button> -->
     </form>
     {% if url %}
-    <p>Uploaded file: <a href="{{ url }}">{{ url }}</a></p>
+    <p>FCM data file: <a href="{{ url }}">{{ url }}</a></p>
     {% endif %}
     {% if fusekiResponse %}
     <p>Jena Fuseki Response: {{ fusekiResponse }}</p>
